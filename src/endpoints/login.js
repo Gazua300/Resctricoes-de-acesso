@@ -19,7 +19,7 @@ const login = async(req, res)=>{
         const [user] = await con('restrict_access_users').where({
             email
         })
-console.log(user)
+
         if(!user){
             statusCode = 404
             throw new Error('Usuário não encontrado')
