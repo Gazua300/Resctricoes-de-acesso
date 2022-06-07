@@ -1,0 +1,64 @@
+POST http://localhost:3003/access_token/signup
+Content-Type: application/json
+
+{
+    "name": "Flamarion França da Silva",
+    "email": "eu@email.com",
+    "password": "crypto",
+    "checkPass": "crypto",
+    "genre": "masculino",
+    "address": "Conjunto Laoga da Paixão caminho 11, número 17, Nova Brasília da Valéria, Salavador-BA",
+    "initialDate": "04/06/1984"
+}
+
+###
+POST http://localhost:3003/access_token/login
+Content-Type: application/json
+
+{
+    "email": "eu@email.com",
+    "password": "crypto"
+}
+
+###
+GET  http://localhost:3003/access_token/personal_data
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0MzU0NzQ3LCJleHAiOjE2NTQzNTgzNDd9.v2RZMrMaC7S7d3PJEjT7RObmj8emmbq6FFcRm_pi2Zc
+
+###
+GET HTTP://localhost:3003/access_token/education_data
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NTg5ODI2LCJleHAiOjE2NTQ1OTM0MjZ9.-tDLMiBAZh3rOnnMnZKttMJ9aRbV6mWfUdA-tGVFXn0
+
+###
+POST http://localhost:3003/access_token/education_data
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0MzYxNzI1LCJleHAiOjE2NTQzNjUzMjV9.ajVIGU-q4HMQyum4KPx29nsKlo5ZHVqXqk93mCyfiDM
+
+{
+    "trainingArea": "Automação",
+    "institution": "SENAI",
+    "situation": "cursando"
+}
+
+###
+PUT http://localhost:3003/access_token/edit_data
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0MzY4NTYyLCJleHAiOjE2NTQzNzIxNjJ9.JyoyDH8PemmxPDCT0ZqlG6XAWZvF0aBWo-tJIeC5wQ8
+
+{
+    "name": "Ronaldo Junior França dos Santos",
+    "email": "ronaldinho@email.com",
+    "genre": "masculino",
+    "address": "Conjunto Laoga da Paixão caminho 11, número 17, Nova Brasília da Valéria, Salavador-BA"
+}
+
+###
+PUT http://localhost:3003/access_token/edit_education/28708933-f2e6-4f40-9e66-934dcfd73e50
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NTg1MDM4LCJleHAiOjE2NTQ1ODg2Mzh9.oHj53prZDOpeI9c1mdTzG7nzcyr7aonVXzP1HEUveew
+
+{
+    "trainingArea": "Desenvolvimento web",
+    "institution": "Labenu",
+    "situation": "concluído" 
+}
+
