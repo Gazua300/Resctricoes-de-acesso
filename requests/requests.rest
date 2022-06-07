@@ -29,15 +29,31 @@ GET HTTP://localhost:3003/access_token/education_data
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NTg5ODI2LCJleHAiOjE2NTQ1OTM0MjZ9.-tDLMiBAZh3rOnnMnZKttMJ9aRbV6mWfUdA-tGVFXn0
 
 ###
+GET http://localhost:3003/access_token/profissional_data
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0NTk4NDczLCJleHAiOjE2NTQ2MDIwNzN9.sNnkqe7kTPtv0upiBFE2UOZtnagllJRt6dHwcnTfA5k
+
+###
 POST http://localhost:3003/access_token/education_data
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0MzYxNzI1LCJleHAiOjE2NTQzNjUzMjV9.ajVIGU-q4HMQyum4KPx29nsKlo5ZHVqXqk93mCyfiDM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA0NzU2LCJleHAiOjE2NTQ2MDgzNTZ9.RPZqmjwXt5AEblpK2_BK-MVQOIFXs-xLzOX2TfHtWS0
 
 {
     "trainingArea": "Automação",
     "institution": "SENAI",
     "situation": "cursando"
 }
+
+###
+POST HTTP://localhost:3003/access_token/profissional_data
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA0NTQ3LCJleHAiOjE2NTQ2MDgxNDd9.H8aaL4C52lvyRW1cENcTps_ntIJSlNoUxVzxNkCKtqk
+
+{
+    "company": "Contax",
+    "role": "agente de marketing",
+    "duration": "6 meses"
+}
+
 
 ###
 PUT http://localhost:3003/access_token/edit_data
@@ -62,3 +78,21 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMt
     "situation": "concluído" 
 }
 
+###
+PUT http://localhost:3003/access_token/edit_profissional/54504df0-c73d-46a6-b5b7-bb717cc33235
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjAzMTU5LCJleHAiOjE2NTQ2MDY3NTl9.Mvm9uuHblZ1sWxDpcBMh5UP8aaLmVjgSFH4iRxcdGsg
+
+{
+    "company": "Cinépolis",
+    "role": "Agente de projeção",
+    "duration": "1 ano e meio"
+}
+
+###
+DELETE http://localhost:3003/access_token/education_data/f90a5e34-58ca-4972-91cc-efe323ac279e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA0NTQ3LCJleHAiOjE2NTQ2MDgxNDd9.H8aaL4C52lvyRW1cENcTps_ntIJSlNoUxVzxNkCKtqk
+
+###
+DELETE http://localhost:3003/access_token/profissional_data/c9ef86a1-cd4b-459a-994c-ab487c735c12
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA5MTA3LCJleHAiOjE2NTQ2MTI3MDd9.6LXqm8tulZPWNrUMGVHIgQcp6SAOI4iczMatODEe84M
