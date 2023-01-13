@@ -11,6 +11,7 @@ const insertEducationData = async(req, res)=>{
         const tokenData = new Authentication().tokenData(token)
         const { trainingArea, institution, situation } = req.body
         const id = new Authentication().generateId()
+        
 
         if(!token){
             statusCode = 401

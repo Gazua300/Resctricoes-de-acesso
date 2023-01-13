@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ###
-POST https://restricao-de-acesso.herokuapp.com/access_token/login
+POST http://localhost:3003/access_token/login
 Content-Type: application/json
 
 {
@@ -22,66 +22,66 @@ Content-Type: application/json
 
 ###
 GET  http://localhost:3003/access_token/personal_data
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0MzU0NzQ3LCJleHAiOjE2NTQzNTgzNDd9.v2RZMrMaC7S7d3PJEjT7RObmj8emmbq6FFcRm_pi2Zc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 ###
 GET HTTP://localhost:3003/access_token/education_data
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NTg5ODI2LCJleHAiOjE2NTQ1OTM0MjZ9.-tDLMiBAZh3rOnnMnZKttMJ9aRbV6mWfUdA-tGVFXn0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 ###
 GET http://localhost:3003/access_token/profissional_data
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0NTk4NDczLCJleHAiOjE2NTQ2MDIwNzN9.sNnkqe7kTPtv0upiBFE2UOZtnagllJRt6dHwcnTfA5k
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 ###
 POST http://localhost:3003/access_token/education_data
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA0NzU2LCJleHAiOjE2NTQ2MDgzNTZ9.RPZqmjwXt5AEblpK2_BK-MVQOIFXs-xLzOX2TfHtWS0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 {
-    "trainingArea": "Automação",
-    "institution": "SENAI",
-    "situation": "cursando"
+    "trainingArea": "Desenvolvimento web fullstack",
+    "institution": "Labenu",
+    "situation": "concluído"
 }
 
 ###
 POST HTTP://localhost:3003/access_token/profissional_data
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA0NTQ3LCJleHAiOjE2NTQ2MDgxNDd9.H8aaL4C52lvyRW1cENcTps_ntIJSlNoUxVzxNkCKtqk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 {
-    "company": "Contax",
-    "role": "agente de marketing",
-    "duration": "6 meses"
+    "company": "Cinépolis - Operadora de Cinemas do Brasil",
+    "role": "Projecionista",
+    "duration": "1 ano e 3 meses"
 }
 
 
 ###
 PUT http://localhost:3003/access_token/edit_data
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYmRmYzU4MDQtYzU5MS00ZTNkLWFiNWUtOWUwYTEwNDA0NWVkIiwiaWF0IjoxNjU0MzY4NTYyLCJleHAiOjE2NTQzNzIxNjJ9.JyoyDH8PemmxPDCT0ZqlG6XAWZvF0aBWo-tJIeC5wQ8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 {
-    "name": "Ronaldo Junior França dos Santos",
-    "email": "ronaldinho@email.com",
+    "name": "Flamarion França",
+    "email": "eu@email.com",
     "genre": "masculino",
-    "address": "Conjunto Laoga da Paixão caminho 11, número 17, Nova Brasília da Valéria, Salavador-BA"
+    "address": "Lugar fictício"
 }
 
 ###
-PUT http://localhost:3003/access_token/edit_education/28708933-f2e6-4f40-9e66-934dcfd73e50
+PUT http://localhost:3003/access_token/edit_education/a1a395b4-626f-48a0-a055-38f08d940a57
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NTg1MDM4LCJleHAiOjE2NTQ1ODg2Mzh9.oHj53prZDOpeI9c1mdTzG7nzcyr7aonVXzP1HEUveew
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 {
     "trainingArea": "Desenvolvimento web",
-    "institution": "Labenu",
+    "institution": "Labenu - Escola de formação de desenvolvedores web",
     "situation": "concluído" 
 }
 
 ###
-PUT http://localhost:3003/access_token/edit_profissional/54504df0-c73d-46a6-b5b7-bb717cc33235
+PUT http://localhost:3003/access_token/edit_profissional/dfd7a5c6-891c-4376-a8a8-e837a549f8fd
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjAzMTU5LCJleHAiOjE2NTQ2MDY3NTl9.Mvm9uuHblZ1sWxDpcBMh5UP8aaLmVjgSFH4iRxcdGsg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 {
     "company": "Cinépolis",
@@ -90,9 +90,9 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMt
 }
 
 ###
-DELETE http://localhost:3003/access_token/education_data/f90a5e34-58ca-4972-91cc-efe323ac279e
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA0NTQ3LCJleHAiOjE2NTQ2MDgxNDd9.H8aaL4C52lvyRW1cENcTps_ntIJSlNoUxVzxNkCKtqk
+DELETE http://localhost:3003/access_token/education_data/a1a395b4-626f-48a0-a055-38f08d940a57
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw
 
 ###
-DELETE http://localhost:3003/access_token/profissional_data/c9ef86a1-cd4b-459a-994c-ab487c735c12
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiMzU3N2UxYTMtMGU4Zi00OWU0LTlmZWEtNjMzNDdhOWViMGI1IiwiaWF0IjoxNjU0NjA5MTA3LCJleHAiOjE2NTQ2MTI3MDd9.6LXqm8tulZPWNrUMGVHIgQcp6SAOI4iczMatODEe84M
+DELETE http://localhost:3003/access_token/profissional_data/dfd7a5c6-891c-4376-a8a8-e837a549f8fd
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiYTQxMWZiMjItYzdiOC00MGUxLWFmY2EtMGEyNzdhZjFkYjE0IiwiaWF0IjoxNjczNTc0NTMyLCJleHAiOjE2NzM1NzgxMzJ9.iImJQI45sJVnlwuJBXqkg6LiHWGOCY3KMgcs0_ve4Mw

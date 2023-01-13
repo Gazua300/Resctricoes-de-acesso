@@ -31,6 +31,16 @@ const editProfissionalData = async(req, res)=>{
         }
 
 
+        const [area] = await con('restrict_access_work').where({
+            id: req.params.id
+        })
+
+        if(!area){
+            statusCode = 404
+            throw new Error('Profissão não encontrada')
+        }
+
+
         await con('restrict_access_work').update({
             company,
             role,

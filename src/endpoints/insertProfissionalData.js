@@ -38,7 +38,7 @@ const insertProfissionalData = async(req, res)=>{
             company,
             role,
             duration,
-            user_id: tokenData.payload
+            user_id: user.id
         })
                 
 

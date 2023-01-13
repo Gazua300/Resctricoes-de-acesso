@@ -31,6 +31,11 @@ const delProfissionalData = async(req, res)=>{
             id: req.params.id
         })
 
+        if(!work){
+            statusCode = 404
+            throw new Error('Profissão não encontrada')
+        }
+
 
         await con('restrict_access_work').del().where({
             id: req.params.id

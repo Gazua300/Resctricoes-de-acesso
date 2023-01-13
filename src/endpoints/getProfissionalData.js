@@ -27,7 +27,7 @@ const getProfissionalData = async(req, res)=>{
 
         const works = await con('restrict_access_work').where({
             user_id: tokenData.payload
-        })
+        }).select('company', 'role', 'duration')
 
         
         res.status(200).send(works)

@@ -17,7 +17,7 @@ const getEducationData = async(req, res)=>{
         
 
         const educationData = await con('restrict_access_education').select(
-
+            'training_area', 'institution', 'situation'
         ).where({
             user_id: tokenData.payload
         })

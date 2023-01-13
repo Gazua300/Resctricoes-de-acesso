@@ -18,7 +18,7 @@ const getPersonalData = async(req, res)=>{
 
         const [user] = await con('restrict_access_users').where({
             id: tokenData.payload
-        })
+        }).select('name', 'email', 'genre', 'address', 'birthdate')
 
         if(!user){
             statusCode = 404

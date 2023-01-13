@@ -32,6 +32,16 @@ const editEducationData = async(req, res)=>{
         }
 
 
+        const [area] = await con('restrict_access_education').where({
+            id: req.params.id
+        })
+
+        if(!area){
+            statusCode = 404
+            throw new Error('Curso não encontrado')
+        }
+
+
         await con('restrict_access_education').update({
             training_area: trainingArea,
             institution,

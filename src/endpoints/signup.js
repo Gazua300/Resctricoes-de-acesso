@@ -11,21 +11,23 @@ const signup = async(req, res)=>{
             name, email, password, checkPass,
             genre, address, initialDate
         } = req.body
-        const arrayDate = initialDate.split('/')
-        const birthdate = `${arrayDate[2]}-${arrayDate[1]}-${arrayDate[0]}`
-        const auth = new Authentication()
-        const id = auth.generateId()
 
         if(
             !name || !email || !password || !checkPass ||
-            !genre || !address || !birthdate
+            !genre || !address || !initialDate
         ){
             statusCode = 401
             throw new Error('Preencha os campos')
         }
 
+
+        const arrayDate = initialDate.split('/')
+        const birthdate = new Date(`${arrayDate[2]}-${arrayDate[1]}-${arrayDate[0]}`)
+        const auth = new Authentication()
+        const id = auth.generateId()
         const hash = auth.hash(password)
         
+                
         const [user] = await con('restrict_access_users').where({
             email
         })
@@ -42,6 +44,12 @@ const signup = async(req, res)=>{
         }
 
 
+        if(birthdate.getTime() > Date.now()){
+            statusCode = 403
+            throw new Error('Você colocou a data de nascimento superior a data atual')
+        }
+
+
         await con('restrict_access_users').insert({
             id,
             name,
@@ -49,7 +57,7 @@ const signup = async(req, res)=>{
             password: hash,
             genre,
             address,
-            birthdate
+            birthdate: birthdate.toLocaleDateString()
         })
 
 

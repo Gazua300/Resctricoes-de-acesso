@@ -25,6 +25,11 @@ const delEducationData = async(req, res)=>{
             id: req.params.id
         })
 
+        if(!education){
+            statusCode = 404
+            throw new Error('Curso não encontrado')
+        }
+
 
         await con('restrict_access_education').del().where({
             id: req.params.id
